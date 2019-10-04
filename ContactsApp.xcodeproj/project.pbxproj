@@ -13,6 +13,7 @@
 		843ECF5F23478D75004D33AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843ECF5D23478D75004D33AD /* Main.storyboard */; };
 		843ECF6123478D76004D33AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843ECF6023478D76004D33AD /* Assets.xcassets */; };
 		843ECF6423478D76004D33AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843ECF6223478D76004D33AD /* LaunchScreen.storyboard */; };
+		843ECF7223478E46004D33AD /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ECF7123478E46004D33AD /* Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		843ECF6023478D76004D33AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843ECF6323478D76004D33AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843ECF6523478D76004D33AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843ECF7123478E46004D33AD /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		843ECF5623478D75004D33AD /* ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
-				843ECF5723478D75004D33AD /* AppDelegate.swift */,
-				843ECF5923478D75004D33AD /* SceneDelegate.swift */,
-				843ECF5B23478D75004D33AD /* ViewController.swift */,
-				843ECF5D23478D75004D33AD /* Main.storyboard */,
-				843ECF6023478D76004D33AD /* Assets.xcassets */,
-				843ECF6223478D76004D33AD /* LaunchScreen.storyboard */,
-				843ECF6523478D76004D33AD /* Info.plist */,
+				843ECF7023478E2B004D33AD /* Models */,
+				843ECF6B23478D8C004D33AD /* ViewControllers */,
+				843ECF6C23478DA4004D33AD /* Storyboards */,
+				843ECF6E23478DE3004D33AD /* Supports */,
+				843ECF6D23478DD2004D33AD /* Resources */,
 			);
 			path = ContactsApp;
+			sourceTree = "<group>";
+		};
+		843ECF6B23478D8C004D33AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				843ECF5B23478D75004D33AD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		843ECF6C23478DA4004D33AD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				843ECF6223478D76004D33AD /* LaunchScreen.storyboard */,
+				843ECF5D23478D75004D33AD /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		843ECF6D23478DD2004D33AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				843ECF6023478D76004D33AD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		843ECF6E23478DE3004D33AD /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				843ECF6523478D76004D33AD /* Info.plist */,
+				843ECF5923478D75004D33AD /* SceneDelegate.swift */,
+				843ECF5723478D75004D33AD /* AppDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		843ECF7023478E2B004D33AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				843ECF7123478E46004D33AD /* Contacts.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843ECF7223478E46004D33AD /* Contacts.swift in Sources */,
 				843ECF5C23478D75004D33AD /* ViewController.swift in Sources */,
 				843ECF5823478D75004D33AD /* AppDelegate.swift in Sources */,
 				843ECF5A23478D75004D33AD /* SceneDelegate.swift in Sources */,
@@ -285,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ContactsApp/Info.plist;
+				INFOPLIST_FILE = ContactsApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ContactsApp/Info.plist;
+				INFOPLIST_FILE = ContactsApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
