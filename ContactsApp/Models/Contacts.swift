@@ -34,16 +34,16 @@ extension Contact {
                         "Ushakov"]
         
         var phoneNumbers = ["375296775400",
-                            "375296775400",
-                            "375296775400",
-                            "375296775400",
-                            "375296775400"]
+                            "375296775401",
+                            "375296775402",
+                            "375296775403",
+                            "375296775404"]
         
-        var emails = ["mail1@gmail.com",
+        var emails = ["mail0@gmail.com",
                       "mail1@gmail.com",
-                      "mail1@gmail.com",
-                      "mail1@gmail.com",
-                      "mail1@gmail.com"]
+                      "mail2@gmail.com",
+                      "mail3@gmail.com",
+                      "mail4@gmail.com"]
         
         var name: String
         var surname: String
