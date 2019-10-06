@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct Contact {
+struct Person {
     var name: String
     var surname: String
     var phoneNumber: String
     var email: String
 }
 
-extension Contact {
+extension Person {
     
-    static func getContacts() -> [Contact] {
+    static func getPersons() -> [Person] {
         
-        var contacts: [Contact] = []
+        var persons: [Person] = []
                
         var names = ["John",
                      "Artur",
@@ -55,16 +55,23 @@ extension Contact {
             !phoneNumbers.isEmpty &&
             !emails.isEmpty {
                 
-                name = names.remove(at: .random(in: 0...names.count))
-                surname = surnames.remove(at: .random(in: 0...surnames.count))
-                phoneNumber = phoneNumbers.remove(at: .random(in: 0...phoneNumbers.count))
-                email = emails.remove(at: .random(in: 0...emails.count))
+                names = names.shuffled()
+                name = names.removeFirst()
                 
-                contacts.append(Contact(name: name,
+                surnames = surnames.shuffled()
+                surname = surnames.removeFirst()
+                
+                phoneNumbers = phoneNumbers.shuffled()
+                phoneNumber = phoneNumbers.removeFirst()
+                
+                emails = emails.shuffled()
+                email = emails.removeFirst()
+                
+                persons.append(Person(name: name,
                                         surname: surname,
                                         phoneNumber: phoneNumber,
                                         email: email))
         }
-        return contacts
+        return persons
     }
 }

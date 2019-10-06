@@ -9,6 +9,8 @@
 import UIKit
 
 class PersonListViewController: UITableViewController {
+    
+    let contacts = Person.getPersons()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,25 +24,26 @@ class PersonListViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return contacts.count
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return contacts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonList", for: indexPath)
+        let name = contacts[indexPath.row].name
+        let surname = contacts[indexPath.row].surname
+        cell.textLabel?.text = name + " " + surname
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +80,15 @@ class PersonListViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let infoVC = segue.destination as! InfoViewController
+            infoVC.phoneNumber = contacts[indexPath.row].phoneNumber
+            infoVC.email = contacts[indexPath.row].email
+        }
     }
-    */
+    
 
 }
