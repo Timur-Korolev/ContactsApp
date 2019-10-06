@@ -15,11 +15,13 @@ class InfoViewController: UIViewController {
     
     var phoneNumber: String!
     var email: String!
+    var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberLabel.text = "Phone Number: " + phoneNumber
         emailLabel.text = "Email: " + email
+        title = name
     }
 
 }
