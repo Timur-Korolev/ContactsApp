@@ -31,8 +31,8 @@ class PersonListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let infoVC = segue.destination as! InfoViewController
-            infoVC.phoneNumber = persons[indexPath.row].phoneNumber
-            infoVC.email = persons[indexPath.row].email
+            infoVC.phoneNumber += persons[indexPath.row].phoneNumber
+            infoVC.email += persons[indexPath.row].email
             infoVC.name = persons[indexPath.row].name + " " + persons[indexPath.row].surname
         }
     }
